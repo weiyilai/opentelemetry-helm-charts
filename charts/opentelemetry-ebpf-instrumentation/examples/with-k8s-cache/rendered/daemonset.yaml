@@ -6,10 +6,10 @@ metadata:
   name: example-opentelemetry-ebpf-instrumentation
   namespace: default
   labels:
-    helm.sh/chart: opentelemetry-ebpf-instrumentation-0.14.0
+    helm.sh/chart: opentelemetry-ebpf-instrumentation-0.14.1
     app.kubernetes.io/name: opentelemetry-ebpf-instrumentation
     app.kubernetes.io/instance: example
-    app.kubernetes.io/version: "v0.13.0"
+    app.kubernetes.io/version: "v0.14.0"
     app.kubernetes.io/managed-by: Helm
     app.kubernetes.io/part-of: obi
     app.kubernetes.io/component: workload
@@ -23,13 +23,13 @@ spec:
   template:
     metadata:
       annotations:
-        checksum/config: d3ed2be6621a4ec3d41cd0f66061da2a15e5aeebf9d227f969565e8ef1530690
+        checksum/config: 7574bdac3d221ee7e95f80e1974f0ed5762aa7018cf2be09c4335fd0db0f8129
         
       labels:
-        helm.sh/chart: opentelemetry-ebpf-instrumentation-0.14.0
+        helm.sh/chart: opentelemetry-ebpf-instrumentation-0.14.1
         app.kubernetes.io/name: opentelemetry-ebpf-instrumentation
         app.kubernetes.io/instance: example
-        app.kubernetes.io/version: "v0.13.0"
+        app.kubernetes.io/version: "v0.14.0"
         app.kubernetes.io/managed-by: Helm
         app.kubernetes.io/part-of: obi
         app.kubernetes.io/component: workload
@@ -41,7 +41,7 @@ spec:
       initContainers:
       containers:
         - name: ebpf-instrument
-          image: ghcr.io/open-telemetry/opentelemetry-ebpf-instrumentation/ebpf-instrument:v0.13.0
+          image: ghcr.io/open-telemetry/opentelemetry-ebpf-instrumentation/ebpf-instrument:v0.14.0
           imagePullPolicy: IfNotPresent
           securityContext:
             privileged: true
